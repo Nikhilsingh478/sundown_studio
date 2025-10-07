@@ -216,9 +216,10 @@ nav {
     overflow: auto;
 }
 
-#moving-text::-webkit-scrollbar{
+#moving-text::-webkit-scrollbar {
     display: none;
 }
+
 .con {
     /* background-color: aquamarine; */
     white-space: nowrap;
@@ -241,16 +242,17 @@ nav {
     margin: 1vw 2vw;
 }
 
-@keyframes move{
-    from{
+@keyframes move {
+    from {
         transform: translateX(0);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
 
-#page2-bottom{
+#page2-bottom {
     height: 80vh;
     width: 100%;
     /* background-color: aliceblue; */
@@ -258,37 +260,37 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 4vw;
-    position:relative;
+    position: relative;
     z-index: 9;
 }
 
-#page2-bottom h1{
+#page2-bottom h1 {
     font-size: 4vw;
     width: 60%;
     line-height: 4vw;
 }
 
-#bottom-right{
+#bottom-right {
     width: 22%;
     /* background-color: aquamarine; */
 }
 
-#bottom-right img{
+#bottom-right img {
     border-radius: 15px;
 }
 
-#bottom-right p{
+#bottom-right p {
     font-weight: 200;
     margin-top: 2vw;
     font-size: 1vw;
 }
 
-#gooey{
+#gooey {
     height: 32vw;
     width: 32vw;
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(to bottom,#FE320A,#f76801) ;
+    background: linear-gradient(to bottom, #FE320A, #f76801);
     position: absolute;
     top: 57%;
     left: 25%;
@@ -296,16 +298,50 @@ nav {
     animation: gooeyanimation 5s infinite alternate ease-in-out;
 }
 
-@keyframes gooeyanimation{
-    from{
-        transform: translate(10%,-10%) skew(0);
+@keyframes gooeyanimation {
+    from {
+        transform: translate(10%, -10%) skew(0);
     }
-    to{
-        transform: translate(-10%,10%) skew(10deg);
+
+    to {
+        transform: translate(-10%, 10%) skew(10deg);
     }
 }
 
-#page3{
-    height: 100vh;
+#page3 {
+    min-height: 100vh;
     width: 100%;
+    padding: 4vw 0;
+}
+
+.elem {
+    height: 130px;
+    width: 100%;
+    /* border-top: 1px solid #8a8a8a89; */
+    border-bottom: 1px solid #8a8a8a89;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 3vw;
+    overflow: hidden;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #ff9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all 0.4s ease;
+}
+
+.elem:hover .overlay {
+    top: 0;
 }
