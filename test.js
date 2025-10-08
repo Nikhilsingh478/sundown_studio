@@ -1,21 +1,3 @@
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('main'),
-//   smooth: true
-// });
-
-var elems = document.querySelectorAll(".elem");
-var bgImageContainer = document.getElementById("fixed-image");
-elems.forEach((e) => {
-  let img = e.getAttribute("data-image");
-  e.addEventListener("mouseenter", function(){ 
-    bgImageContainer.style.backgroundImage = `url(${img})`;
-    bgImageContainer.style.display = "block";
-  });
-  e.addEventListener("mouseleave", function(){ 
-    bgImageContainer.style.display = "none";
-  });
-});
-
 // Cache DOM elements once at the top
 const headings = document.querySelectorAll(".heading");
 const rightDiv = document.getElementById("rightdiv");
@@ -48,5 +30,3 @@ function handleHeadingClick(event) {
 headings.forEach(heading => {
   heading.addEventListener("click", handleHeadingClick);
 });
-
-

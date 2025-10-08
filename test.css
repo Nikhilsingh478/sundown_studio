@@ -1,0 +1,134 @@
+@font-face {
+    font-family: NeueHaas;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: NeueHaas;
+    src: url(./NeueHaasDisplayLight.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: NeueHaas;
+    src: url(./NeueHaasDisplayRoman.ttf);
+    font-weight: 200;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NeueHaas;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#tri-container {
+    min-height: 100vh;
+    width: 100vw;
+    /* padding: 1vw 0; */
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEAE3;
+}
+
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 95vw;
+    border-radius: 30px;
+    overflow: hidden;
+    /* background-color: yellow; */
+}
+
+#leftdiv {
+    background-color: black;
+    width: 40vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.headings {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-left: 1px solid rgb(94, 94, 94);
+    color: gray;
+    transition: all 0.4s ease;
+}
+
+.headings h1 {
+    font-size: 5vw;
+    transition: all 0.4s ease;
+}
+
+#text-container{
+    width: 20vw;
+    text-wrap: wrap;
+    
+}
+
+#text-container p {
+    font-weight: 100;
+    font-size: 0.7vw;
+    color: white;
+    transition: all 0.4s ease-in;
+    
+}
+
+#rightdiv {
+    /* background-color: rgb(212, 0, 255); */
+    width: 60vw;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.4s ease;
+}
+
+@media (max-width: 480px) {
+    #box {
+        flex-direction: column;
+    }
+
+    #box #leftdiv {
+        height: 50vh;
+        width: 100vw;
+        gap: 2vh;
+        align-items: start;
+        padding: 5vh;
+    }
+
+    #box #rightdiv {
+        height: 40vh;
+        width: 100vw;
+    }
+
+    .headings h1 {
+        font-size: 5vh;
+    }
+
+    #text-container p {
+        font-weight: 100;
+        font-size: 1.7vh;
+        text-wrap: wrap;
+    }
+    #text-container{
+    width: 80vw;
+}
+}
