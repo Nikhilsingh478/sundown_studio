@@ -16,6 +16,8 @@ elems.forEach((e) => {
   });
 });
 
+
+
 // Cache DOM elements once at the top
 const headings = document.querySelectorAll(".heading");
 const rightDiv = document.getElementById("rightdiv");
